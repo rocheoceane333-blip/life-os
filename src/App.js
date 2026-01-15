@@ -1,6 +1,6 @@
 import React from 'react';
 // Correction du chemin : on ajoute /Components/
-import Sidebar from './Components/Sidebar';
+import Sidebar from './Components/ui/sidebar';
 
 function App() {
   return (
