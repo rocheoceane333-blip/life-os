@@ -1,0 +1,10 @@
+export class SocialEvent {
+  constructor({ id, title, date, location, participantIds = [], notes }) {
+    this.id = id;
+    this.title = title;
+    this.date = date;
+    this.location = location;
+    this.participantIds = participantIds;
+    this.notes = notes;
+  }
+}

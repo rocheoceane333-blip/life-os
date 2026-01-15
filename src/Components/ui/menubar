@@ -1,0 +1,13 @@
+import React from 'react';
+
+export default function Menubar({ items }) {
+  return (
+    <div className="flex h-10 items-center space-x-1 rounded-md border border-white/10 bg-black/40 p-1">
+      {items.map((item, i) => (
+        <button key={i} className="px-3 py-1.5 text-xs font-medium text-white hover:bg-white/10 rounded-sm transition-all">
+          {item}
+        </button>
+      ))}
+    </div>
+  );
+}

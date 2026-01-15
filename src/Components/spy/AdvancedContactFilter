@@ -1,0 +1,19 @@
+import React from 'react';
+import { Filter } from 'lucide-react';
+
+export default function AdvancedContactFilter() {
+  return (
+    <div className="flex gap-2 p-2 bg-black/40 rounded-lg border border-white/5 items-center">
+      <Filter size={14} className="text-violet-500" />
+      <input 
+        type="text" 
+        placeholder="Filtre avancé..." 
+        className="bg-transparent text-[10px] text-white outline-none w-full"
+      />
+      <div className="flex gap-1">
+        <span className="w-2 h-2 rounded-full bg-red-500"></span>
+        <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+      </div>
+    </div>
+  );
+}

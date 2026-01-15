@@ -1,0 +1,10 @@
+export class ContactHistory {
+  constructor({ id, contactId, type, duration, notes, timestamp = new Date() }) {
+    this.id = id;
+    this.contactId = contactId;
+    this.type = type; // 'Call', 'Meeting', 'Message'
+    this.duration = duration;
+    this.notes = notes;
+    this.timestamp = timestamp;
+  }
+}

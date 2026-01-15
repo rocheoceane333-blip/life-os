@@ -1,0 +1,31 @@
+import React, { useState } from 'react';
+
+export default function Resizable({ children }) {
+  const [width, setWidth] = useState(300);
+
+  const startResizing = (e) => {
+    const handleMouseMove = (moveEvent) => {
+      setWidth(moveEvent.clientX);
+    };
+    const stopResizing = () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', stopResizing);
+  };
+
+  return (
+    <div className="flex">
+      <div style={{ width: `${width}px` }} className="overflow-hidden">
+        {children[0]}
+      </div>
+      <div 
+        onMouseDown={startResizing}
+        className="w-1 bg-white/5 hover:bg-violet-500 cursor-col-resize transition-colors"
+      />
+      <div className="flex-1">
+        {children[1]}
+      </div>
+    </div>
+  );
+}

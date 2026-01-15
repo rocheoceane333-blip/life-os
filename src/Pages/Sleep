@@ -1,0 +1,46 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Progress from '../Components/ui/progress';
+import { Moon, Zzz, Clock } from 'lucide-react';
+
+export default function Sleep() {
+  return (
+    <div className="p-8 space-y-6">
+      <h1 className="text-3xl font-black text-indigo-400 italic uppercase tracking-tighter">Circadian Rhythm</h1>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <Card title="Last Night" subtitle="Deep Sleep Analysis">
+          <div className="flex flex-col items-center py-6">
+            <div className="relative w-32 h-32 flex items-center justify-center">
+               <Moon className="text-indigo-500 animate-pulse" size={40} />
+               <div className="absolute inset-0 border-4 border-indigo-500/20 rounded-full border-t-indigo-500 animate-spin-slow"></div>
+            </div>
+            <p className="mt-4 text-2xl font-black text-white">7h 42m</p>
+            <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Quality: 88%</p>
+          </div>
+        </Card>
+
+        <div className="lg:col-span-2 space-y-6">
+          <Card title="Sleep Architecture" subtitle="Cycles">
+            <div className="space-y-6 pt-4">
+              <div>
+                <div className="flex justify-between text-[10px] font-bold uppercase mb-2">
+                  <span className="text-indigo-300">Deep Sleep</span>
+                  <span className="text-white">1h 15m</span>
+                </div>
+                <Progress value={45} className="bg-indigo-500/10" />
+              </div>
+              <div>
+                <div className="flex justify-between text-[10px] font-bold uppercase mb-2">
+                  <span className="text-blue-300">REM Sleep</span>
+                  <span className="text-white">2h 10m</span>
+                </div>
+                <Progress value={65} className="bg-blue-500/10" />
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}

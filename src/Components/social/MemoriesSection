@@ -1,0 +1,23 @@
+import React from 'react';
+import { Camera } from 'lucide-react';
+
+export default function MemoriesSection() {
+  return (
+    <div className="p-5 bg-white/5 rounded-2xl border border-white/10">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-white font-bold flex items-center gap-2">
+          <Camera size={16} className="text-pink-400" /> Galerie des Souvenirs
+        </h3>
+        <button className="text-[10px] bg-white/10 px-2 py-1 rounded text-gray-300 hover:bg-white/20">VOIR TOUT</button>
+      </div>
+      <div className="grid grid-cols-3 gap-2">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="aspect-square bg-gray-800 rounded-lg border border-white/5 flex items-center justify-center">
+            <span className="text-[10px] text-gray-600">Image {i}</span>
+          </div>
+        ))}
+      </div>
+      <p className="text-[10px] text-gray-500 mt-3 italic text-center">"Le bonheur est la seule chose qui se double quand on la partage."</p>
+    </div>
+  );
+}

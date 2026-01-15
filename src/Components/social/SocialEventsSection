@@ -1,0 +1,28 @@
+import React from 'react';
+import { CalendarDays } from 'lucide-react';
+
+export default function SocialEventsSection() {
+  const events = [
+    { name: "Anniversaire Sarah", date: "Demain", type: "Fête" },
+    { name: "Dîner équipe", date: "20 Janv.", type: "Pro" }
+  ];
+
+  return (
+    <div className="p-4 bg-white/5 rounded-2xl border border-white/10 shadow-inner">
+      <h3 className="text-white text-xs font-bold uppercase mb-4 flex items-center gap-2">
+        <CalendarDays size={14} className="text-blue-400" /> Événements Sociaux
+      </h3>
+      <div className="space-y-2">
+        {events.map((e, i) => (
+          <div key={i} className="flex justify-between items-center p-2 bg-black/30 rounded-lg">
+            <div>
+              <p className="text-xs text-white font-medium">{e.name}</p>
+              <p className="text-[10px] text-gray-500">{e.type}</p>
+            </div>
+            <span className="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full">{e.date}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

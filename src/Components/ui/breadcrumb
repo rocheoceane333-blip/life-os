@@ -1,0 +1,17 @@
+import React from 'react';
+import { ChevronRight } from 'lucide-react';
+
+export default function Breadcrumb({ items }) {
+  return (
+    <nav className="flex items-center space-x-2 text-[10px] font-medium uppercase tracking-widest text-gray-500">
+      {items.map((item, i) => (
+        <React.Fragment key={i}>
+          <span className={i === items.length - 1 ? "text-violet-400" : "hover:text-white cursor-pointer transition-colors"}>
+            {item}
+          </span>
+          {i < items.length - 1 && <ChevronRight size={10} />}
+        </React.Fragment>
+      ))}
+    </nav>
+  );
+}

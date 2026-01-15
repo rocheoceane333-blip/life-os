@@ -1,0 +1,21 @@
+import React, { useState } from 'react';
+
+export default function Tabs({ tabs }) {
+  const [active, setActive] = useState(0);
+  return (
+    <div className="w-full">
+      <div className="flex p-1 bg-white/5 rounded-xl border border-white/10 mb-4">
+        {tabs.map((tab, i) => (
+          <button
+            key={i}
+            onClick={() => setActive(i)}
+            className={`flex-1 py-2 text-xs font-bold rounded-lg transition-all ${active === i ? 'bg-violet-600 text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+      <div className="animate-in fade-in duration-500">{tabs[active].content}</div>
+    </div>
+  );
+}

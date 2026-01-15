@@ -1,0 +1,20 @@
+import React from 'react';
+
+export default function RadioGroup({ options, value, onChange }) {
+  return (
+    <div className="space-y-2">
+      {options.map((opt) => (
+        <label key={opt.value} className="flex items-center gap-3 cursor-pointer">
+          <div 
+            onClick={() => onChange(opt.value)}
+            className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all
+              ${value === opt.value ? 'border-violet-500' : 'border-white/20'}`}
+          >
+            {value === opt.value && <div className="w-2.5 h-2.5 bg-violet-500 rounded-full" />}
+          </div>
+          <span className="text-sm text-gray-300">{opt.label}</span>
+        </label>
+      ))}
+    </div>
+  );
+}

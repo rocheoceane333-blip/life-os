@@ -1,0 +1,52 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Badge from '../Components/ui/badge';
+import { Brain, Calendar, MessageSquare } from 'lucide-react';
+
+export default function PersonDetail() {
+  return (
+    <div className="p-8 space-y-6">
+      <header className="flex items-end gap-6 pb-6 border-b border-white/5">
+        <div className="w-24 h-24 rounded-3xl bg-white/5 border border-white/10 shadow-2xl" />
+        <div className="flex-1">
+          <h1 className="text-4xl font-black text-white tracking-tighter italic">MARC LEVINSON</h1>
+          <div className="flex gap-2 mt-2">
+            <Badge variant="neon">CERCLE INTIME</Badge>
+            <Badge variant="outline">CONTACT PRO</Badge>
+          </div>
+        </div>
+      </header>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Mémoire sociale */}
+        <div className="lg:col-span-2 space-y-6">
+          <Card title="Social Memory" subtitle="Core Facts">
+            <div className="space-y-3">
+              <div className="p-4 bg-white/5 rounded-xl border-l-2 border-violet-500 text-xs">
+                "Préfère les discussions stratégiques le matin. Passionné par l'architecture brutaliste."
+              </div>
+              <div className="p-4 bg-white/5 rounded-xl border-l-2 border-emerald-500 text-xs">
+                "Sa fille s'appelle Sarah, elle vient de commencer ses études de médecine."
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Sidebar détails */}
+        <div className="space-y-6">
+          <Card title="Last Interactions" subtitle="Recent History">
+            <div className="space-y-4">
+              <div className="flex gap-3 items-center">
+                <div className="p-2 bg-white/5 rounded-lg text-violet-400"><Calendar size={14}/></div>
+                <div className="text-[10px]">
+                  <p className="text-white font-bold">Lundi 12 Janvier</p>
+                  <p className="text-gray-500 italic">Déjeuner d'affaires</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}

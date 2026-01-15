@@ -1,0 +1,17 @@
+import React from 'react';
+
+export default function SmartCircles() {
+  return (
+    <div className="p-5 bg-gradient-to-tr from-indigo-900/20 to-transparent rounded-3xl border border-indigo-500/30">
+      <h3 className="text-indigo-200 text-xs font-bold mb-4 uppercase">Cercles Intelligents</h3>
+      <div className="relative h-24 flex items-center justify-center">
+        <div className="absolute w-20 h-20 border border-indigo-500/20 rounded-full"></div>
+        <div className="absolute w-12 h-12 border border-indigo-500/40 rounded-full"></div>
+        <div className="w-4 h-4 bg-indigo-400 rounded-full animate-pulse"></div>
+      </div>
+      <div className="mt-2 text-center">
+        <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded-full font-mono">3 CONTACTS PRIORITAIRES</span>
+      </div>
+    </div>
+  );
+}

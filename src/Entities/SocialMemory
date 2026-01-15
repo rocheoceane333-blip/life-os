@@ -1,0 +1,9 @@
+export class SocialMemory {
+  constructor({ id, personId, content, importanceLevel, lastRecall = new Date() }) {
+    this.id = id;
+    this.personId = personId;
+    this.content = content; // ex: "Aime le vin rouge mais déteste le blanc"
+    this.importanceLevel = importanceLevel; // 1-5
+    this.lastRecall = lastRecall;
+  }
+}

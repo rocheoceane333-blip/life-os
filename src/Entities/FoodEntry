@@ -1,0 +1,12 @@
+export class FoodEntry {
+  constructor({ id, mealId, quantity, calories, protein, carbs, fat, timestamp = new Date() }) {
+    this.id = id;
+    this.mealId = mealId;
+    this.quantity = quantity;
+    this.calories = calories;
+    this.protein = protein;
+    this.carbs = carbs;
+    this.fat = fat;
+    this.timestamp = timestamp;
+  }
+}

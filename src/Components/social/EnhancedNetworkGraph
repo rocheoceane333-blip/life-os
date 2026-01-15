@@ -1,0 +1,21 @@
+import React from 'react';
+
+export default function EnhancedNetworkGraph() {
+  return (
+    <div className="glass p-6 rounded-3xl border border-white/5 h-80 flex flex-col">
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-white font-bold">Global Network</h3>
+          <p className="text-xs text-gray-500">Vue neuronale de vos connexions</p>
+        </div>
+        <div className="w-3 h-3 bg-emerald-500 rounded-full animate-ping"></div>
+      </div>
+      <div className="flex-1 flex items-center justify-center relative">
+        {/* Cercles concentriques pour simuler un radar */}
+        <div className="absolute w-40 h-40 border border-white/5 rounded-full"></div>
+        <div className="absolute w-20 h-20 border border-white/5 rounded-full"></div>
+        <span className="text-[10px] text-gray-600 font-mono italic">Mappage des noeuds en cours...</span>
+      </div>
+    </div>
+  );
+}

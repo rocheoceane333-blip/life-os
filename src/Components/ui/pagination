@@ -1,0 +1,14 @@
+import React from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+export default function Pagination() {
+  return (
+    <div className="flex items-center justify-center gap-2 py-4">
+      <button className="p-2 bg-white/5 rounded-md hover:bg-white/10 text-gray-400"><ChevronLeft size={16}/></button>
+      {[1, 2, 3].map(n => (
+        <button key={n} className={`w-8 h-8 rounded-md text-xs ${n === 1 ? 'bg-violet-600 text-white' : 'bg-white/5 text-gray-400'}`}>{n}</button>
+      ))}
+      <button className="p-2 bg-white/5 rounded-md hover:bg-white/10 text-gray-400"><ChevronRight size={16}/></button>
+    </div>
+  );
+}

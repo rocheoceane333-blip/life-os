@@ -1,0 +1,20 @@
+import React from 'react';
+
+export default function MoodLevelSlider({ value, onChange }) {
+  return (
+    <div style={{ padding: '20px', color: 'white', background: 'rgba(255,255,255,0.05)', borderRadius: '15px' }}>
+      <label style={{ display: 'block', marginBottom: '10px' }}>Intensité de l'humeur (1 à 10)</label>
+      <input 
+        type="range" 
+        min="1" 
+        max="10" 
+        value={value} 
+        onChange={(e) => onChange(parseInt(e.target.value))}
+        style={{ width: '100%', cursor: 'pointer', accentColor: '#8b5cf6' }}
+      />
+      <div style={{ textAlign: 'center', fontSize: '24px', marginTop: '10px', fontWeight: 'bold' }}>
+        {value} / 10
+      </div>
+    </div>
+  );
+}

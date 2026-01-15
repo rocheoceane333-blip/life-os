@@ -1,0 +1,23 @@
+import React from 'react';
+import { User, Heart, Star, Shield } from 'lucide-react';
+
+export default function CustomRelationCard({ name, status, type }) {
+  const icons = {
+    love: <Heart className="text-red-500" size={18} />,
+    family: <Shield className="text-blue-400" size={18} />,
+    friend: <Star className="text-yellow-400" size={18} />,
+    default: <User className="text-gray-400" size={18} />
+  };
+
+  return (
+    <div className="glass p-4 rounded-xl border border-white/10 flex items-center gap-4 hover:border-violet-500/50 transition-all cursor-pointer group">
+      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center border border-white/5 group-hover:scale-110 transition-transform">
+        {icons[type] || icons.default}
+      </div>
+      <div>
+        <h4 className="text-white font-semibold text-sm">{name}</h4>
+        <p className="text-[10px] text-gray-500 uppercase tracking-tighter">{status || 'Aucune interaction'}</p>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,43 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Input from '../Components/ui/input';
+import Badge from '../Components/ui/badge';
+import Button from '../Components/ui/button';
+import { Search, UserPlus } from 'lucide-react';
+
+export default function People() {
+  return (
+    <div className="p-8 space-y-6">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h1 className="text-3xl font-black text-white italic uppercase tracking-tighter">Social Network</h1>
+          <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mt-1">Managed Entities: 142</p>
+        </div>
+        <div className="flex gap-2">
+          <div className="relative w-64">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={14} />
+            <Input placeholder="RECHERCHER..." className="pl-10 h-10 text-[10px]" />
+          </div>
+          <Button variant="neon" size="sm" className="h-10 px-4"><UserPlus size={16}/></Button>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Exemple de carte pour une personne */}
+        <Card className="hover:border-violet-500/50 cursor-pointer transition-all group">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-violet-600 to-indigo-600 border-2 border-white/10 overflow-hidden" />
+            <div>
+              <h3 className="text-white text-sm font-bold group-hover:text-violet-400">Marc Levinson</h3>
+              <p className="text-gray-500 text-[10px] font-mono italic">Inner Circle</p>
+            </div>
+          </div>
+          <div className="mt-4 flex gap-1">
+            <Badge variant="outline" className="text-[8px] px-1.5 py-0">TECH</Badge>
+            <Badge variant="outline" className="text-[8px] px-1.5 py-0">AI</Badge>
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}

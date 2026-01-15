@@ -1,0 +1,26 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Calendar from '../Components/ui/calendar';
+
+export default function Agenda() {
+  return (
+    <div className="p-8 space-y-6">
+      <h1 className="text-3xl font-black text-white italic">AGENDA</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <Card title="Planning Hebdomadaire">
+            <div className="h-[500px] flex items-center justify-center border-2 border-dashed border-white/5 rounded-2xl text-gray-600">
+              Interface Calendrier en cours de synchronisation...
+            </div>
+          </Card>
+        </div>
+        <div className="space-y-6">
+          <Calendar />
+          <Card title="Événements à venir" subtitle="Social Events">
+            <p className="text-xs text-gray-400 italic">Aucun événement prévu aujourd'hui.</p>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}

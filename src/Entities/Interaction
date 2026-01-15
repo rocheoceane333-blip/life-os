@@ -1,0 +1,10 @@
+export class Interaction {
+  constructor({ id, personId, type, quality, moodAfter, notes }) {
+    this.id = id;
+    this.personId = personId;
+    this.type = type;
+    this.quality = quality; // 1-5
+    this.moodAfter = moodAfter;
+    this.notes = notes;
+  }
+}

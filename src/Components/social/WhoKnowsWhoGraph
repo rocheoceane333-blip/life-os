@@ -1,0 +1,21 @@
+import React from 'react';
+import { GitBranch } from 'lucide-react';
+
+export default function WhoKnowsWhoGraph() {
+  return (
+    <div className="p-5 bg-black/40 rounded-2xl border border-white/5 relative overflow-hidden h-56">
+      <div className="flex items-center gap-2 mb-4">
+        <GitBranch size={16} className="text-emerald-400" />
+        <h3 className="text-white text-xs font-bold uppercase">Inter-connexions</h3>
+      </div>
+      <div className="flex flex-col items-center justify-center h-full">
+        <div className="flex gap-12 mb-4">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_8px_#10b981]"></div>
+          <div className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_8px_#10b981]"></div>
+        </div>
+        <div className="w-16 h-[1px] bg-white/20"></div>
+        <p className="text-[10px] text-gray-500 mt-4 italic font-mono uppercase tracking-tighter">Détection des chemins communs</p>
+      </div>
+    </div>
+  );
+}

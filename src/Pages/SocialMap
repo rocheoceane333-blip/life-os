@@ -1,0 +1,31 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import { Network, Share2 } from 'lucide-react';
+
+export default function SocialMap() {
+  return (
+    <div className="p-8 space-y-6">
+      <h1 className="text-3xl font-black text-white italic uppercase font-mono">Social Map</h1>
+      <Card className="h-[600px] relative overflow-hidden flex items-center justify-center bg-black/60">
+        {/* Ici on intégrerait une lib comme React Flow ou D3.js */}
+        <div className="text-center space-y-4">
+          <Network className="text-violet-500/20 mx-auto" size={80} />
+          <p className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+            Neural Social Map Initializing...
+          </p>
+          <div className="flex gap-4 justify-center">
+            <div className="w-2 h-2 rounded-full bg-violet-500 animate-ping"></div>
+            <div className="w-2 h-2 rounded-full bg-blue-500 animate-ping [animation-delay:0.2s]"></div>
+            <div className="w-2 h-2 rounded-full bg-fuchsia-500 animate-ping [animation-delay:0.4s]"></div>
+          </div>
+        </div>
+        
+        {/* Overlay des cercles */}
+        <div className="absolute top-6 left-6 flex flex-col gap-2">
+          <div className="px-3 py-1 bg-violet-500/10 border border-violet-500/20 rounded-full text-[8px] font-black text-violet-400 uppercase">Cercle Intime (5)</div>
+          <div className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-[8px] font-black text-blue-400 uppercase">Pro (24)</div>
+        </div>
+      </Card>
+    </div>
+  );
+}

@@ -1,0 +1,10 @@
+export class NutritionGoal {
+  constructor({ id, targetCalories, targetProtein, targetCarbs, targetFat, activeFrom }) {
+    this.id = id;
+    this.targetCalories = targetCalories;
+    this.targetProtein = targetProtein;
+    this.targetCarbs = targetCarbs;
+    this.targetFat = targetFat;
+    this.activeFrom = activeFrom;
+  }
+}

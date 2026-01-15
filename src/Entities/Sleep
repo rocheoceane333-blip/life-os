@@ -1,0 +1,10 @@
+export class Sleep {
+  constructor({ id, bedTime, wakeTime, qualityScore, deepSleepDuration, disturbances = 0 }) {
+    this.id = id;
+    this.bedTime = bedTime;
+    this.wakeTime = wakeTime;
+    this.qualityScore = qualityScore; // 1-100
+    this.deepSleepDuration = deepSleepDuration;
+    this.disturbances = disturbances;
+  }
+}

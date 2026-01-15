@@ -1,0 +1,24 @@
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+export default function Carousel({ items }) {
+  const [index, setIndex] = useState(0);
+  const next = () => setIndex((index + 1) % items.length);
+  const prev = () => setIndex((index - 1 + items.length) % items.length);
+
+  return (
+    <div className="relative group overflow-hidden rounded-2xl">
+      <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${index * 100}%)` }}>
+        {items.map((item, i) => (
+          <div key={i} className="min-w-full">{item}</div>
+        ))}
+      </div>
+      <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 p-1 bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+        <ChevronLeft className="text-white" size={20}/>
+      </button>
+      <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+        <ChevronRight className="text-white" size={20}/>
+      </button>
+    </div>
+  );
+}

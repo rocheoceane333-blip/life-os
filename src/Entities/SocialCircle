@@ -1,0 +1,8 @@
+export class SocialCircle {
+  constructor({ id, name, description, memberIds = [] }) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+    this.memberIds = memberIds;
+  }
+}

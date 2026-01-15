@@ -1,0 +1,21 @@
+import React from 'react';
+import { MessageSquare, Phone, Calendar } from 'lucide-react';
+
+export default function EnhancedPersonCard({ name, bio }) {
+  return (
+    <div className="bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10 shadow-xl">
+      <div className="flex justify-between items-start mb-4">
+        <div className="w-14 h-14 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-2xl shadow-lg rotate-3"></div>
+        <div className="flex gap-2">
+          <button className="p-2 bg-white/5 rounded-lg hover:bg-white/10 text-gray-400"><MessageSquare size={16}/></button>
+          <button className="p-2 bg-white/5 rounded-lg hover:bg-white/10 text-gray-400"><Phone size={16}/></button>
+        </div>
+      </div>
+      <h4 className="text-white font-bold text-lg">{name || "Nom Inconnu"}</h4>
+      <p className="text-gray-400 text-xs mb-4 line-clamp-2">{bio || "Pas de description disponible pour ce profil."}</p>
+      <div className="flex items-center gap-2 text-[10px] text-violet-400 font-bold bg-violet-500/10 w-fit px-2 py-1 rounded">
+        <Calendar size={12} /> PROCHAIN RDV : DEMAIN 14H
+      </div>
+    </div>
+  );
+}

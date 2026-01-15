@@ -1,0 +1,17 @@
+import React from 'react';
+import { X } from 'lucide-react';
+
+export default function Toast({ message, type = "info", onClose }) {
+  const colors = {
+    info: "border-blue-500 bg-blue-500/10 text-blue-200",
+    error: "border-red-500 bg-red-500/10 text-red-200",
+    success: "border-emerald-500 bg-emerald-500/10 text-emerald-200"
+  };
+
+  return (
+    <div className={`flex items-center gap-4 p-4 rounded-xl border-l-4 shadow-xl animate-in slide-in-from-right ${colors[type]}`}>
+      <p className="text-xs font-medium">{message}</p>
+      <button onClick={onClose} className="opacity-50 hover:opacity-100"><X size={14}/></button>
+    </div>
+  );
+}

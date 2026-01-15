@@ -1,0 +1,9 @@
+export class DataConflict {
+  constructor({ id, entityType, localData, remoteData, resolved = false }) {
+    this.id = id;
+    this.entityType = entityType;
+    this.localData = localData;
+    this.remoteData = remoteData;
+    this.resolved = resolved;
+  }
+}

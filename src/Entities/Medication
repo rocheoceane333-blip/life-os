@@ -1,0 +1,10 @@
+export class Medication {
+  constructor({ id, name, type, dosage, unit, stock }) {
+    this.id = id;
+    this.name = name;
+    this.type = type; // 'Pill', 'Liquid'
+    this.dosage = dosage;
+    this.unit = unit; // 'mg', 'ml'
+    this.stock = stock;
+  }
+}

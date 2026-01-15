@@ -1,0 +1,17 @@
+import React from 'react';
+
+export default function RelationshipTree() {
+  return (
+    <div className="p-4 bg-black/20 rounded-2xl border border-white/10 h-48 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-8 h-8 bg-violet-600 rounded-full mx-auto mb-2 shadow-[0_0_15px_rgba(139,92,246,0.5)]"></div>
+        <div className="w-[1px] h-8 bg-violet-500/30 mx-auto"></div>
+        <div className="flex gap-10">
+          <div className="w-6 h-6 bg-slate-800 border border-white/20 rounded-full"></div>
+          <div className="w-6 h-6 bg-slate-800 border border-white/20 rounded-full"></div>
+        </div>
+        <p className="text-[9px] text-gray-600 mt-4 uppercase font-bold tracking-tighter">Généalogie des rencontres</p>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,17 @@
+import React from 'react';
+
+export default function AISuggestions() {
+  const suggestions = ["Appeler maman", "Sortie avec l'équipe", "Anniversaire de Luc"];
+  
+  return (
+    <div className="space-y-2">
+      <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Suggestions d'actions</p>
+      {suggestions.map((s, i) => (
+        <div key={i} className="flex justify-between items-center p-2 bg-white/5 rounded-lg text-xs hover:bg-white/10 cursor-pointer transition">
+          <span className="text-gray-200">{s}</span>
+          <span className="text-violet-400">+</span>
+        </div>
+      ))}
+    </div>
+  );
+}

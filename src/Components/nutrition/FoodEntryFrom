@@ -1,0 +1,29 @@
+import React from 'react';
+
+const moods = [
+  { emoji: '😫', label: 'Fatigué', value: 1 },
+  { emoji: '😐', label: 'Neutre', value: 3 },
+  { emoji: '😊', label: 'Bien', value: 5 },
+  { emoji: '🤩', label: 'Génial', value: 7 }
+];
+
+export default function MoodSelector({ onSelect }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px' }}>
+      {moods.map((m) => (
+        <button 
+          key={m.value}
+          onClick={() => onSelect(m.value)}
+          style={{ 
+            background: 'none', border: 'none', fontSize: '40px', 
+            cursor: 'pointer', transition: 'transform 0.2s' 
+          }}
+          onMouseEnter={(e) => e.target.style.transform = 'scale(1.2)'}
+          onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+        >
+          {m.emoji}
+        </button>
+      ))}
+    </div>
+  );
+}

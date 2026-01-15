@@ -1,0 +1,11 @@
+export class Person {
+  constructor({ id, firstName, lastName, nickname, birthday, bio, tags = [] }) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.nickname = nickname;
+    this.birthday = birthday;
+    this.bio = bio;
+    this.tags = tags;
+  }
+}

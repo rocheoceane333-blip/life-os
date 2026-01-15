@@ -1,0 +1,23 @@
+import React from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+export default function Calendar() {
+  const days = ['LU', 'MA', 'ME', 'JE', 'VE', 'SA', 'DI'];
+  return (
+    <div className="p-3 bg-black/40 border border-white/10 rounded-xl">
+      <div className="flex justify-between items-center mb-4">
+        <button className="p-1 hover:bg-white/10 rounded"><ChevronLeft size={14} /></button>
+        <span className="text-[10px] font-bold uppercase tracking-widest text-white">Janvier 2026</span>
+        <button className="p-1 hover:bg-white/10 rounded"><ChevronRight size={14} /></button>
+      </div>
+      <div className="grid grid-cols-7 gap-1 text-center">
+        {days.map(d => <div key={d} className="text-[8px] text-gray-600 font-bold">{d}</div>)}
+        {[...Array(31)].map((_, i) => (
+          <div key={i} className={`text-[10px] p-1.5 rounded-md cursor-pointer hover:bg-violet-500/30 ${i === 13 ? 'bg-violet-600 text-white' : 'text-gray-400'}`}>
+            {i + 1}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,21 @@
+import React from 'react';
+import { Heart } from 'lucide-react';
+
+export default function EnhancedLoveGraph() {
+  return (
+    <div className="p-6 bg-red-950/10 rounded-3xl border border-red-500/20 relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-4 opacity-10">
+        <Heart size={80} fill="currentColor" className="text-red-500" />
+      </div>
+      <h3 className="text-red-200 font-bold mb-4 flex items-center gap-2">
+        <Heart size={18} className="text-red-500" /> Matrice Emotionnelle
+      </h3>
+      <div className="h-32 flex items-end justify-between gap-2">
+        {[40, 70, 90, 60, 85].map((h, i) => (
+          <div key={i} className="flex-1 bg-red-500/20 rounded-t-lg border-t border-red-500/40" style={{ height: `${h}%` }}></div>
+        ))}
+      </div>
+      <p className="text-[10px] text-red-300/60 mt-4 text-center font-mono">SYNCHRONISATION DES COEURS : 88%</p>
+    </div>
+  );
+}

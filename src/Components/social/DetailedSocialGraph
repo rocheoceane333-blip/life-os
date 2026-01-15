@@ -1,0 +1,20 @@
+import React from 'react';
+
+export default function DetailedSocialGraph({ connections }) {
+  return (
+    <div className="bg-slate-900/50 p-6 rounded-3xl border border-white/5 shadow-2xl">
+      <div className="flex justify-between items-center mb-6">
+        <h3 className="text-white font-medium">Analyse Détaillée du Réseau</h3>
+        <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full uppercase">Live Sync</span>
+      </div>
+      <div className="h-64 flex flex-col justify-center items-center border border-dashed border-white/10 rounded-xl">
+        <div className="flex gap-4">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-violet-500 to-fuchsia-500 animate-pulse"></div>
+          <div className="w-12 h-12 rounded-full bg-slate-800 border border-white/10"></div>
+          <div className="w-12 h-12 rounded-full bg-slate-800 border border-white/10"></div>
+        </div>
+        <p className="text-gray-500 text-xs mt-4">Calcul des vecteurs d'influence...</p>
+      </div>
+    </div>
+  );
+}

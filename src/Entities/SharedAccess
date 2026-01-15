@@ -1,0 +1,9 @@
+export class SharedAccess {
+  constructor({ id, targetEntityId, targetEntityType, grantedToEmail, accessLevel }) {
+    this.id = id;
+    this.targetEntityId = targetEntityId;
+    this.targetEntityType = targetEntityType; // ex: 'Meal', 'Activity'
+    this.grantedToEmail = grantedToEmail;
+    this.accessLevel = accessLevel; // 'read', 'write', 'admin'
+  }
+}

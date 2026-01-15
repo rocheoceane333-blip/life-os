@@ -1,0 +1,17 @@
+import React from 'react';
+
+export default function Card({ children, title, subtitle, className = "" }) {
+  return (
+    <div className={`bg-slate-900/40 backdrop-blur-md border border-white/5 rounded-3xl p-6 shadow-2xl ${className}`}>
+      {(title || subtitle) && (
+        <div className="mb-6">
+          {title && <h3 className="text-white font-black text-lg tracking-tighter uppercase">{title}</h3>}
+          {subtitle && <p className="text-gray-500 text-[10px] font-bold uppercase tracking-widest mt-1">{subtitle}</p>}
+        </div>
+      )}
+      <div className="relative">
+        {children}
+      </div>
+    </div>
+  );
+}

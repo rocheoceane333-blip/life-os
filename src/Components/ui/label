@@ -1,0 +1,9 @@
+import React from 'react';
+
+export default function Label({ children, htmlFor }) {
+  return (
+    <label htmlFor={htmlFor} className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 block">
+      {children}
+    </label>
+  );
+}

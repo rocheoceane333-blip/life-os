@@ -1,0 +1,30 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Chart from '../Components/ui/chart';
+import { BarChart3, TrendingUp } from 'lucide-react';
+
+export default function Statistics() {
+  return (
+    <div className="p-8 space-y-6">
+      <h1 className="text-3xl font-black text-white italic uppercase">Global Analytics</h1>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Card title="Energy vs Mood" subtitle="30-day Correlation">
+          <div className="h-64">
+            <Chart type="line" />
+          </div>
+        </Card>
+        
+        <Card title="Productivity Score" subtitle="Algorithm Output">
+          <div className="flex items-end gap-2 py-8">
+            <span className="text-6xl font-black text-white tracking-tighter">94.2</span>
+            <div className="flex items-center text-emerald-400 text-xs font-bold mb-2">
+              <TrendingUp size={14} className="mr-1" /> +2.4%
+            </div>
+          </div>
+          <p className="text-gray-600 text-[10px] font-medium uppercase tracking-[0.2em]">Top 5% of your recorded history</p>
+        </Card>
+      </div>
+    </div>
+  );
+}

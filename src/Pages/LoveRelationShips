@@ -1,0 +1,29 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import { Heart } from 'lucide-react';
+
+export default function LoveRelationShips() {
+  return (
+    <div className="p-8 space-y-6">
+      <h1 className="text-3xl font-black text-pink-500 italic uppercase">Core Relations</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card title="Partenaire" subtitle="Active Memory">
+          <div className="space-y-4">
+            <div className="flex justify-between border-b border-white/5 pb-2">
+              <span className="text-gray-500 text-[10px] font-bold">ANNIVERSAIRE</span>
+              <span className="text-white text-xs">12 Mars</span>
+            </div>
+            <div className="p-3 bg-pink-500/5 rounded-xl border border-pink-500/20 text-xs text-pink-200 italic">
+              "Aime particulièrement les fleurs sauvages et le jazz des années 50."
+            </div>
+          </div>
+        </Card>
+        <Card title="Moments Marquants" subtitle="Shared Events">
+          <div className="h-32 flex items-center justify-center border-2 border-dashed border-white/5 rounded-2xl">
+            <Heart className="text-pink-500/20" size={40} />
+          </div>
+        </Card>
+      </div>
+    </div>
+  );
+}

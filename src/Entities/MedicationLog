@@ -1,0 +1,8 @@
+export class MedicationLog {
+  constructor({ id, medicationId, takenAt = new Date(), status = 'taken' }) {
+    this.id = id;
+    this.medicationId = medicationId;
+    this.takenAt = takenAt;
+    this.status = status;
+  }
+}

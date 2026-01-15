@@ -1,0 +1,33 @@
+import React from 'react';
+import { FileText, Download } from 'lucide-react';
+
+export default function SessionReport() {
+  return (
+    <div className="p-5 bg-gradient-to-b from-gray-900 to-black rounded-2xl border border-white/5 shadow-2xl">
+      <div className="flex justify-between items-start mb-6">
+        <div>
+          <h3 className="text-white font-bold text-sm flex items-center gap-2">
+            <FileText size={16} className="text-blue-400" /> Rapport de Session
+          </h3>
+          <p className="text-[10px] text-gray-500 font-mono">ID: SESSION_2026_01_14</p>
+        </div>
+        <button className="p-2 bg-blue-500/10 hover:bg-blue-500/20 rounded-lg text-blue-400 transition-colors">
+          <Download size={16} />
+        </button>
+      </div>
+      <div className="space-y-2">
+        <div className="flex justify-between text-[11px]">
+          <span className="text-gray-400">Actions exécutées</span>
+          <span className="text-white font-mono">24</span>
+        </div>
+        <div className="flex justify-between text-[11px]">
+          <span className="text-gray-400">Alertes ignorées</span>
+          <span className="text-white font-mono">0</span>
+        </div>
+        <div className="w-full h-1 bg-white/5 rounded-full mt-4 overflow-hidden">
+          <div className="w-3/4 h-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,25 @@
+import React from 'react';
+import Card from '../Components/ui/card';
+import Table from '../Components/ui/table';
+import { History } from 'lucide-react';
+
+export default function InteractionHistory() {
+  const headers = ["Date", "Contact", "Type", "Note", "Qualité"];
+  // Exemple de données basées sur l'entity ContactHistory
+  const data = [
+    { date: "14/01/26", contact: "Marc L.", type: "Appel", note: "Discussion projet", quality: "⭐⭐⭐⭐" },
+    { date: "13/01/26", contact: "Sophie A.", type: "Meeting", note: "Café", quality: "⭐⭐⭐⭐⭐" }
+  ];
+
+  return (
+    <div className="p-8 space-y-6">
+      <div className="flex items-center gap-3">
+        <History className="text-violet-500" size={32} />
+        <h1 className="text-3xl font-black text-white italic uppercase tracking-tighter">Interaction History</h1>
+      </div>
+      <Card>
+        <Table headers={headers} data={data} />
+      </Card>
+    </div>
+  );
+}

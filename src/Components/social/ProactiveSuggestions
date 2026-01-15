@@ -1,0 +1,21 @@
+import React from 'react';
+import { Zap } from 'lucide-react';
+
+export default function ProactiveSuggestions() {
+  return (
+    <div className="p-4 bg-gradient-to-r from-amber-500/10 to-transparent rounded-xl border-l-4 border-amber-500">
+      <div className="flex items-center gap-2 mb-2">
+        <Zap size={14} className="text-amber-500 fill-amber-500" />
+        <h4 className="text-xs font-bold text-amber-200 uppercase">Mode Proactif</h4>
+      </div>
+      <div className="bg-black/20 p-3 rounded-lg border border-white/5">
+        <p className="text-[11px] text-gray-300">
+          Tu n'as pas interagi avec <strong>Marc</strong> depuis 3 semaines. Un petit message pour prendre des nouvelles ?
+        </p>
+        <button className="mt-2 w-full py-1 bg-amber-500/20 hover:bg-amber-500/30 text-amber-500 text-[10px] font-bold rounded transition-colors">
+          PRÉPARER UN MESSAGE
+        </button>
+      </div>
+    </div>
+  );
+}

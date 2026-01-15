@@ -1,0 +1,10 @@
+export class MoodEntry {
+  constructor({ id, rating, energy, stressors, notes, timestamp = new Date() }) {
+    this.id = id;
+    this.rating = rating; // 1-10
+    this.energy = energy; // 1-10
+    this.stressors = stressors; // Array de tags
+    this.notes = notes;
+    this.timestamp = timestamp;
+  }
+}
